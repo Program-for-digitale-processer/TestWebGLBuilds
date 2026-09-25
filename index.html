@@ -9,7 +9,7 @@
 
     <!-- Unity replaces this at build time -->
     <!-- Example: "KuumAR" -->
-    <title>R4C_Basque</title>
+    <title>KuumAR</title>
 
     <!-- Viewport setup:
          - disables zoom
@@ -322,7 +322,7 @@
         /* Helper to notify Unity when fullscreen changes or drops natively */
         function notifyUnityFullscreenState() {
             if (!isFullscreenNow() && window.unityInstance) {
-                window.unityInstance.SendMessage("FullscreenButton_container", "OnFullscreenExited", "Not in fullscreen anymore");
+                window.unityInstance.SendMessage("Fullscreen_container", "OnFullscreenExited", "Not in fullscreen anymore");
             }
         }
 
@@ -394,12 +394,12 @@
           var buildUrl = "Build";
           var loaderUrl = buildUrl + "/b23dd96997961653e2825455633aac82.loader.js";
           var config = {
-            dataUrl: buildUrl + "/c416aed2765c53c7e4377c414f183372.data.unityweb",
-            frameworkUrl: buildUrl + "/0574e30e232fa7e468b088abe2a2a77c.framework.js.unityweb",
-            codeUrl: buildUrl + "/dee353a2fc600598963477309eb7ba89.wasm.unityweb",
+            dataUrl: buildUrl + "/c54e37f49af3ab2b0aa2f269901574bf.data.unityweb",
+            frameworkUrl: buildUrl + "/2522244b47f2fb76ce599ab3784e22d6.framework.js.unityweb",
+            codeUrl: buildUrl + "/f8457848dac5b9d87e1c265bae5fdb20.wasm.unityweb",
             streamingAssetsUrl: "StreamingAssets",
-            companyName: "VIA",
-            productName: "R4C_Basque",
+            companyName: "via",
+            productName: "KuumAR",
             productVersion: "0.1",
             showBanner: unityShowBanner,
             devicePixelRatio: Math.min(window.devicePixelRatio, 2),
@@ -477,7 +477,7 @@
 
             if (window.unityInstance) {
 
-                window.unityInstance.SendMessage("FullscreenButton_container", "OnFullscreenRestoredViaTouch", "Entered fullscreen by touching screen");
+                window.unityInstance.SendMessage("Fullscreen_container", "OnFullscreenRestoredViaTouch", "Entered fullscreen by touching screen");
             }
         }
 
