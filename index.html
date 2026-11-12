@@ -9,7 +9,7 @@
 
     <!-- Unity replaces this at build time -->
     <!-- Example: "KuumAR" -->
-    <title>KystAR</title>
+    <title>KuumAR</title>
 
     <!-- Viewport setup:
          - disables zoom
@@ -322,7 +322,7 @@
         /* Helper to notify Unity when fullscreen changes or drops natively */
         function notifyUnityFullscreenState() {
             if (!isFullscreenNow() && window.unityInstance) {
-                window.unityInstance.SendMessage("FullscreenButton_container", "OnFullscreenExited", "Not in fullscreen anymore");
+                window.unityInstance.SendMessage("Fullscreen_container", "OnFullscreenExited", "Not in fullscreen anymore");
             }
         }
 
@@ -394,13 +394,13 @@
           var buildUrl = "Build";
           var loaderUrl = buildUrl + "/b23dd96997961653e2825455633aac82.loader.js";
           var config = {
-            dataUrl: buildUrl + "/fafeaa7dfd9a903fd64c9fd2b004493e.data.unityweb",
-            frameworkUrl: buildUrl + "/854ce20f66cec066bba7f1480f4a4ed2.framework.js.unityweb",
-            codeUrl: buildUrl + "/d034c0483175497f10f84d4da9b40bc2.wasm.unityweb",
+            dataUrl: buildUrl + "/480b746482cc486abd5ff48c2bf3a279.data.unityweb",
+            frameworkUrl: buildUrl + "/3566efe754b746426cfd430301b4acf0.framework.js.unityweb",
+            codeUrl: buildUrl + "/13383d81330abf8b300dfdec23a354e8.wasm.unityweb",
             streamingAssetsUrl: "StreamingAssets",
-            companyName: "VIA",
-            productName: "KystAR",
-            productVersion: "1.0",
+            companyName: "via",
+            productName: "KuumAR",
+            productVersion: "0.1",
             showBanner: unityShowBanner,
             devicePixelRatio: Math.min(window.devicePixelRatio, 2),
           };
@@ -477,7 +477,7 @@
 
             if (window.unityInstance) {
 
-                window.unityInstance.SendMessage("FullscreenButton_container", "OnFullscreenRestoredViaTouch", "Entered fullscreen by touching screen");
+                window.unityInstance.SendMessage("Fullscreen_container", "OnFullscreenRestoredViaTouch", "Entered fullscreen by touching screen");
             }
         }
 
